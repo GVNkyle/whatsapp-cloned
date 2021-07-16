@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { conversation } from './models/conversation';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'whatsapp-cloned';
+  // conversation: conversation = {
+  //   latestMessage: '',
+  //   messages: []
+  // };
+  conversation: any;
+
+  onConversationSelected(conversation: conversation) {
+    this.conversation = conversation;
+  }
 }
